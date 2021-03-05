@@ -86,3 +86,23 @@ novoBotaoSexta.addEventListener('click', function() {
     }
   }
 });
+
+function dayZoom() {
+  let zoom = document.querySelector('#days');
+  zoom.addEventListener('mouseover', function(evento) {
+    evento.target.style.fontSize = '40px';
+    evento.target.style.fontWeight = '800';
+  })
+};
+
+function dayNormal() {
+  let normal = document.querySelector('#days');
+  normal.addEventListener('mouseout', function(evento) {
+    evento.target.style.fontWeight = '200';
+    evento.target.style.fontSize = '20px';
+  })
+};
+
+
+dayZoom();
+dayNormal();
