@@ -115,3 +115,14 @@ function adicionaTarefa(string) {
 }
 
 adicionaTarefa('Tarefa:');
+
+let legenda = document.querySelector('.my-tasks');
+let novaLegenda = document.createElement('div');
+
+function criaLegenda(cor) {
+  novaLegenda.className = 'task';
+  novaLegenda.style.backgroundColor = cor;
+  legenda.appendChild(novaLegenda);
+}
+
+criaLegenda('pink');
