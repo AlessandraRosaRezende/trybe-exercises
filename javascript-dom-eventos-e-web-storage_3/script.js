@@ -103,6 +103,15 @@ function dayNormal() {
   })
 };
 
-
 dayZoom();
 dayNormal();
+
+let tarefa = document.querySelector('.my-tasks');
+let novaTarefa = document.createElement('span');
+
+function adicionaTarefa(string) {  
+  novaTarefa.innerHTML = string;
+  tarefa.appendChild(novaTarefa);
+}
+
+adicionaTarefa('Tarefa:');
