@@ -44,13 +44,23 @@ function criaDiasMes() {
 
 criaDiasMes();
 
+let botao = document.querySelector('.buttons-container');
+let novoBotao = document.createElement('button');
 function criaBotaoFeriado(feriados) {
-  let botao = document.querySelector('.buttons-container');
-  let novoBotao = document.createElement('button');
-  
   novoBotao.innerHTML = feriados;
   novoBotao.id = 'btn-holiday'
   botao.appendChild(novoBotao);
 };
 
 criaBotaoFeriado('Feriados');
+
+novoBotao.addEventListener('click', function() {
+  const holidays = document.querySelectorAll('.holiday');
+  for (let index = 0; index < holidays.length; index += 1) {
+    if (holidays[index].style.backgroundColor === 'white') {
+      holidays[index].style.backgroundColor = 'rgb(238,238,238)';
+    } else {
+      holidays[index].style.backgroundColor = 'white';
+    }
+  }
+});
