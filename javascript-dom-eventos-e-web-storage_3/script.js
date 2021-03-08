@@ -10,7 +10,6 @@ function createDaysOfTheWeek() {
     weekDaysList.appendChild(dayListItem);
   };
 };
-
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
@@ -41,7 +40,6 @@ function criaDiasMes() {
     }
   };
 }
-
 criaDiasMes();
 
 let botaoFeriado = document.querySelector('.buttons-container');
@@ -51,7 +49,6 @@ function criaBotaoFeriado(feriados) {
   novoBotaoFeriado.id = 'btn-holiday'
   botaoFeriado.appendChild(novoBotaoFeriado);
 };
-
 criaBotaoFeriado('Feriados');
 
 novoBotaoFeriado.addEventListener('click', function() {
@@ -72,7 +69,6 @@ function criaBotaoSexta(sexta) {
   novoBotaoSexta.id = 'btn-friday'
   botaoSexta.appendChild(novoBotaoSexta);
 };
-
 criaBotaoSexta('Sexta-feira');
 
 const fridayDays = [4, 11, 18, 25];
@@ -102,27 +98,82 @@ function dayNormal() {
     evento.target.style.fontSize = '20px';
   })
 };
-
 dayZoom();
 dayNormal();
 
 let tarefa = document.querySelector('.my-tasks');
 let novaTarefa = document.createElement('span');
-
 function adicionaTarefa(string) {  
   novaTarefa.innerHTML = string;
   tarefa.appendChild(novaTarefa);
 }
-
 adicionaTarefa('Tarefa:');
 
 let legenda = document.querySelector('.my-tasks');
 let novaLegenda = document.createElement('div');
-
 function criaLegenda(cor) {
   novaLegenda.className = 'task';
   novaLegenda.style.backgroundColor = cor;
   legenda.appendChild(novaLegenda);
 }
-
 criaLegenda('pink');
+
+let selecTask = document.getElementsByClassName('task-selected');
+let myTask = document.querySelector('.task');
+function selecionaTask() {
+  myTask.addEventListener("click", function(event){
+    if (selecTask.length === 0) {
+      event.target.className = "task-selected";
+    } else {
+      event.target.className = "task";
+    }
+  });
+}
+selecionaTask();
+
+function coloreDia() {
+  let selectedTask = document.getElementsByClassName('task-selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+  days.addEventListener('click', function(event){
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+};
+coloreDia();
+
+function adicionaTarefa() {
+  let getInputField = document.querySelector('#task-input');
+  let addInputButton = document.querySelector('#btn-add');
+  let getTaskList = document.querySelector('.task-list');
+
+  addInputButton.addEventListener('click', function() {
+    if (getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    } else if (getInputField.value.length = 0) {
+      alert('Error: Digite ao menos 1 caractere.');
+    }
+  })
+
+  getInputField.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13 && getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    }
+  });
+};
+
+adicionaTarefa();
