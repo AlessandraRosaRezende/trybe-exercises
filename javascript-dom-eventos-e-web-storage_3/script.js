@@ -175,5 +175,4 @@ function adicionaTarefa() {
     }
   });
 };
-
 adicionaTarefa();
