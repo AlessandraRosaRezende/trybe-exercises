@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formulário Currículo</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">    
+</head>
+<body>  
+  <fieldset id="field1">
+    <legend>Dados Pessoais</legend>
+    <form action="" method="GET" enctype="multipart/form-data">
+      <label for="input-nome">Nome: 
+        <input type="text" name="user" id="input-nome" required autofocus placeholder="Informe seu nome" maxlength="40">
+      </label>
+      <br>
+      <br>
+      <label for="input-email">Email: 
+        <input type="email" name="email" id="input-email" required autocomplete="off" placeholder="Digite seu endereço de email" maxlength="50">
+      </label>
+      <br>
+      <br>
+      <label for="input-cpf">CPF: 
+        <input type="text" name="cpf" id="input-cpf" required placeholder="Digite seu CPF" maxlength="11">
+      </label>
+      <br>
+      <br>
+      <label for="input-adress">Endereço completo: 
+        <input type="text" name="endereco" id="input-adress" required placeholder="Digite seu endereço completo" maxlength="200">
+      </label>
+      <br>
+      <br>
+      <label for="input-city">Cidade: 
+        <input type="text" name="cidade" id="input-city" required placeholder="Informe sua cidade" maxlength="28">
+      </label>
+      <br>
+      <br>
+      <label for="input-state">Estado: 
+        <select name="estado" id="input-state" required></select>
+      </label>
+      <br>
+      <br>
+      <label for="casa">
+        <input type="radio" name="input-tipo" id="casa" value="casa" required>Casa
+      </label>
+      <label for="apto">
+        <input type="radio" name="input-tipo" id="apto" value="apto" required>Apartamento
+      </label>
+      <br>
+      <br>      
+    </form>
+  </fieldset>
+  <br>
+  <fieldset id="field2">
+    <legend>Dados Último Emprego</legend>
+    <form action="" method="GET" enctype="multipart/form-data">
+      <label for="resumo-curriculo">Resumo do Currículo<br>
+        <textarea id="resumo-curriculo" name="resumo" rows="10" cols="50" maxlength="1000" placeholder="Digite um resumo do seu currículo, em até 1000 caracteres." required></textarea>        
+      </label>
+      <br>
+      <br>
+      <label for="input-cargo">Cargo: 
+        <input type="text" name="cargo" id="input-cargo" required placeholder="Informe qual seu último cargo" maxlength="40">
+      </label>
+      <br>
+      <br>
+      <label for="input-desc-cargo">Descrição do cargo: 
+        <input type="text" name="desc-cargo" id="input-desc-cargo" required placeholder="Descreva seu último cargo" maxlength="500">
+      </label>
+      <br>
+      <br>
+      <label for="data-inicio">Data de início: 
+        <input type="date" name="data-inicio" id="data-inicio" required>
+      </label>
+      <br>
+      <br>      
+    </form>    
+  </fieldset>
+  <br>
+  <br>
+  <button type="submit" value="Enviar">Enviar</button>
+  <br>
+  <br>
+  <button id="clear">Limpar Formulário</button>
+  <script src="script.js"></script>
+</body>
+</html>
