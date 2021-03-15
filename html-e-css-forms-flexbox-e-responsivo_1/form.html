@@ -8,81 +8,69 @@
   <link rel="stylesheet" type="text/css" href="styles.css">    
 </head>
 <body>  
-  <fieldset id="field1">
-    <legend>Dados Pessoais</legend>
-    <form action="" method="GET" enctype="multipart/form-data">
-      <label for="input-nome">Nome: 
-        <input type="text" name="user" id="input-nome" required autofocus placeholder="Informe seu nome" maxlength="40">
-      </label>
+  <form action="" method="GET" enctype="multipart/form-data">
+    <fieldset id="field1">
+      <legend>Dados Pessoais</legend>
+      <label for="input-nome">Nome: </label> 
+      <input type="text" name="user" id="input-nome" required autofocus placeholder="Informe seu nome" maxlength="40">
       <br>
       <br>
-      <label for="input-email">Email: 
-        <input type="email" name="email" id="input-email" required autocomplete="off" placeholder="Digite seu endereço de email" maxlength="50">
-      </label>
+      <label for="input-email">Email: </label>
+      <input type="email" name="email" id="input-email" required autocomplete="off" placeholder="Digite seu endereço de email" maxlength="50">
       <br>
       <br>
-      <label for="input-cpf">CPF: 
-        <input type="text" name="cpf" id="input-cpf" required placeholder="Digite seu CPF" maxlength="11">
-      </label>
+      <label for="input-cpf">CPF: </label>
+      <input type="text" name="cpf" id="input-cpf" required placeholder="Digite seu CPF" maxlength="11">
       <br>
       <br>
-      <label for="input-adress">Endereço completo: 
-        <input type="text" name="endereco" id="input-adress" required placeholder="Digite seu endereço completo" maxlength="200">
-      </label>
+      <label for="input-adress">Endereço completo: </label>
+      <input type="text" name="endereco" id="input-adress" required placeholder="Digite seu endereço completo" maxlength="200">      
       <br>
       <br>
-      <label for="input-city">Cidade: 
-        <input type="text" name="cidade" id="input-city" required placeholder="Informe sua cidade" maxlength="28">
-      </label>
+      <label for="input-city">Cidade: </label>
+      <input type="text" name="cidade" id="input-city" required placeholder="Informe sua cidade" maxlength="28">
       <br>
       <br>
-      <label for="input-state">Estado: 
-        <select name="estado" id="input-state" required></select>
-      </label>
+      <label for="input-state">Estado: </label>
+      <select name="estado" id="input-state" required></select>      
       <br>
       <br>
-      <label for="casa">
-        <input type="radio" name="input-tipo" id="casa" value="casa" required>Casa
-      </label>
-      <label for="apto">
-        <input type="radio" name="input-tipo" id="apto" value="apto" required>Apartamento
-      </label>
+      <input type="radio" name="input-tipo" id="casa" value="casa" required checked>
+      <label for="casa">Casa</label>
+      <input type="radio" name="input-tipo" id="apto" value="apto" required>      
+      <label for="apto">Apartamento</label>      
       <br>
       <br>      
-    </form>
-  </fieldset>
-  <br>
-  <fieldset id="field2">
-    <legend>Dados Último Emprego</legend>
-    <form action="" method="GET" enctype="multipart/form-data">
-      <label for="resumo-curriculo">Resumo do Currículo<br>
-        <textarea id="resumo-curriculo" name="resumo" rows="10" cols="50" maxlength="1000" placeholder="Digite um resumo do seu currículo, em até 1000 caracteres." required></textarea>        
-      </label>
+    </fieldset>
+    <br>
+    <fieldset id="field2">
+      <legend>Dados Último Emprego</legend>
+      <label for="resumo-curriculo">Resumo do Currículo<br></label>
+      <textarea id="resumo-curriculo" name="resumo" rows="10" cols="50" maxlength="1000" placeholder="Digite um resumo do seu currículo, em até 1000 caracteres." required></textarea>              
       <br>
       <br>
-      <label for="input-cargo">Cargo: 
-        <input type="text" name="cargo" id="input-cargo" required placeholder="Informe qual seu último cargo" maxlength="40">
-      </label>
+      <label for="input-cargo">Cargo: </label>
+      <input type="text" name="cargo" id="input-cargo" required placeholder="Informe qual seu último cargo" maxlength="40">      
       <br>
       <br>
-      <label for="input-desc-cargo">Descrição do cargo: 
-        <input type="text" name="desc-cargo" id="input-desc-cargo" required placeholder="Descreva seu último cargo" maxlength="500">
-      </label>
+      <label for="input-desc-cargo">Descrição do cargo: </label>
+      <input type="text" name="desc-cargo" id="input-desc-cargo" required placeholder="Descreva seu último cargo" maxlength="500">
       <br>
       <br>
-      <label for="data-inicio">Data de início: 
-        <input type="date" name="data-inicio" id="data-inicio" required>
-      </label>
+      <label for="data-inicio">Data de início: </label>
+      <input type="date" name="data-inicio" id="data-inicio" required>      
       <br>
       <br>      
-    </form>    
-  </fieldset>
-  <br>
-  <br>
-  <button type="submit" value="Enviar">Enviar</button>
-  <br>
-  <br>
-  <button id="clear">Limpar Formulário</button>
+    </fieldset>
+    <br>
+    <br>
+    <button type="submit">Enviar</button>
+    <br>
+    <br>
+    <button type="reset" id="clear">Limpar Formulário</button>
+    <div>
+    </div>
+  </form>    
   <script src="script.js"></script>
 </body>
 </html>
